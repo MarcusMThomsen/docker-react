@@ -9,10 +9,8 @@ COPY . .
 
 RUN npm run build
 
-
-
-
+#Part 2.
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build usr/share/nginx/html
-#nginx iamge runs nginx as command already
+#nginx image runs nginx as command already
